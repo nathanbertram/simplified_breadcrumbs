@@ -21,7 +21,7 @@ module SimplifiedBreadcrumbs
   module Helper
 
     def breadcrumb(separator = "&rsaquo;")
-      @breadcrumbs.map { |name, url| link_to_unless_current(name, url) }.join(" #{separator} ")
+      @breadcrumbs.map { |name, url| link_to_unless_current(name, url) }.join(" #{separator} ") if @breadcrumbs
     end
 
   end
